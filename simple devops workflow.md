@@ -79,17 +79,17 @@ click -> save
 
 __Run Jenkins job to pull code from GitHub__
 
-click -> New item
-Enter an item name: PullCodeFromGitHub
-click -> freestyle project
-click -> ok
-Description: Pull Code From GitHub
+click -> New item \
+Enter an item name: PullCodeFromGitHub \
+click -> freestyle project \
+click -> ok \
+Description: Pull Code From GitHub \
 
-Source Code Management
-choose -> Git
-Repository URL: https://github.com/tkdhanasekar/hello-world.git
-click -> apply
-click -> save
+Source Code Management \
+choose -> Git \
+Repository URL: https://github.com/tkdhanasekar/hello-world.git \
+click -> apply \
+click -> save \
 click -> Build Now
 
 __set Maven on Jenkins Server__
@@ -119,43 +119,43 @@ PATH=$PATH:$HOME/bin:$JAVA_HOME:$M2_HOME:$M2
 #echo $PATH
 # mvn -v
 ```
-now you can check version of maven from any folder
-In Jenkins GUI
-click -> manage jenkins
-click -> manage plugins
-click -> available
-search -> maven
-select -> maven integration
-click -> Install without restart
+now you can check version of maven from any folder \
+In Jenkins GUI \
+click -> manage jenkins \
+click -> manage plugins \
+click -> available \
+search -> maven \
+select -> maven integration \
+click -> Install without restart 
 
-click -> Manage jenkins 
-click -> Global tool configuration
-under JDK 
-Add  JDK 
-disable install automatically
-Name: Java-11
-JAVA_HOME:  /usr/lib/jvm/java-11-openjdk-11........
+click -> Manage jenkins  \
+click -> Global tool configuration \
+under JDK  \
+Add  JDK  \
+disable install automatically \
+Name: Java-11 \
+JAVA_HOME:  /usr/lib/jvm/java-11-openjdk-11........ \
 
-under Maven
-Add Maven
-doable install automatically
-Name: maven-3.8.5
-MAVEN_HOME: /opt/maven
-click -> apply and save
+under Maven \
+Add Maven \
+doable install automatically \
+Name: maven-3.8.5 \
+MAVEN_HOME: /opt/maven \
+click -> apply and save 
 
 
 __Build Java Project Using Jenkins__
 
-click -> new item
-FirstMavenProject
-select -> Maven Project
-click -> ok
-Description: First Maven Project
-Under Git
-Repository URL : https://github.com/tkdhanasekar/hello-world
-under goals and options -> clean install
-click -> apply and save
-click -> Build Now
+click -> new item \
+FirstMavenProject \
+select -> Maven Project \
+click -> ok \
+Description: First Maven Project \
+Under Git \
+Repository URL : https://github.com/tkdhanasekar/hello-world \
+under goals and options -> clean install \
+click -> apply and save \
+click -> Build Now \
 
 __Install Tomcat server__
 
@@ -217,41 +217,41 @@ Restart serivce and try to login to tomcat application from the browser.
 
 __Integrate Tomcat with Jenkins__
 
-click -> manage jenkins
-click -> available
-search -> deploy to container
-select -> install without restart
+click -> manage jenkins \
+click -> available \
+search -> deploy to container \
+select -> install without restart \
 
-click -> manage jenkins
-click -> manage credentials
-click -> jenkins
-click -> global credentials
-click -> add credentials
-kind -> username with password
-username -> deployer
-password -> deployer
-ID -> tomcat_deployer
-description -> tomcat_deployer
-click -> ok
-click -> new job
-Enter item name -> BuildAndDeployJob
-select -> Maven project
-click -> ok
-Description -> Build Code with help of Maven and deploy on tomcat server
-on Source code management -> select git
-repository URL -> https://github.com/tkdhanasekar/hello-world.git
-branch specifier -> */master
-Goals and options -> clean install
-on post build actions -> deploy war/ear to container
-WAR/EAR files -> **/*.war
-Containers -> tomcat 8.x remote
-credentials -> deployer/*****(tomcat deployer)
-tomcat url -> http://tomcat-server-ip:8080
-click -> apply and save
+click -> manage jenkins \
+click -> manage credentials \
+click -> jenkins \
+click -> global credentials \
+click -> add credentials \
+kind -> username with password \
+username -> deployer \
+password -> deployer \
+ID -> tomcat_deployer \
+description -> tomcat_deployer \
+click -> ok \
+click -> new job \
+Enter item name -> BuildAndDeployJob \
+select -> Maven project \
+click -> ok \
+Description -> Build Code with help of Maven and deploy on tomcat server \
+on Source code management -> select git \
+repository URL -> https://github.com/tkdhanasekar/hello-world.git \
+branch specifier -> */master \
+Goals and options -> clean install \
+on post build actions -> deploy war/ear to container \
+WAR/EAR files -> **/*.war \
+Containers -> tomcat 8.x remote \
+credentials -> deployer/*****(tomcat deployer) \
+tomcat url -> http://tomcat-server-ip:8080 \
+click -> apply and save \
 
-click -> build now
-click -> tomcatserver:8080/manager
-click ->webapp 
+click -> build now \
+click -> tomcatserver:8080/manager \
+click ->webapp  \
 
 ```
 $ git clone ssh://github.com/tkdhanasekar/hello-world.git
@@ -268,8 +268,8 @@ $ git commit -m "new commit"
 $ git push origin master
 ```
 
-click -> Build and deploy Job
-click -> source code management
-on Build triggers -> enable poll SCM
+click -> Build and deploy Job \
+click -> source code management \
+on Build triggers -> enable poll SCM \
 schedule * * * * *
 click -> apply and save 
