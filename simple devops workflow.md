@@ -60,21 +60,21 @@ __Install Jenkins on AMI Linux__
 
 __Integrate Git with Jenkins__
 
-go to jenkins GUI 
-click -> manage jenkins
-click -> manage plugins
-click -> available
-search -> github
-select -> github plugin
+go to jenkins GUI  \
+click -> manage jenkins \
+click -> manage plugins \
+click -> available \
+search -> github \
+select -> github plugin \
 click -> without restart
 
-To configure jenkins
-click -> manage jenkins
-click -> global tools configuration
-under git 
-give name to Git
-under path to Git executable to git
-click -> apply
+To configure jenkins \
+click -> manage jenkins \
+click -> global tools configuration \
+under git  \
+give name to Git \
+under path to Git executable to git \
+click -> apply \
 click -> save
 
 __Run Jenkins job to pull code from GitHub__
