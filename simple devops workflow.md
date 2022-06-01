@@ -271,5 +271,5 @@ $ git push origin master
 click -> Build and deploy Job \
 click -> source code management \
 on Build triggers -> enable poll SCM \
-schedule * * * * *
+schedule * * * * * \
 click -> apply and save 
