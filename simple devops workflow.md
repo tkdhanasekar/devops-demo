@@ -83,7 +83,7 @@ click -> New item \
 Enter an item name: PullCodeFromGitHub \
 click -> freestyle project \
 click -> ok \
-Description: Pull Code From GitHub \
+Description: Pull Code From GitHub 
 
 Source Code Management \
 choose -> Git \
@@ -134,7 +134,7 @@ under JDK  \
 Add  JDK  \
 disable install automatically \
 Name: Java-11 \
-JAVA_HOME:  /usr/lib/jvm/java-11-openjdk-11........ \
+JAVA_HOME:  /usr/lib/jvm/java-11-openjdk-11........ 
 
 under Maven \
 Add Maven \
@@ -155,7 +155,7 @@ Under Git \
 Repository URL : https://github.com/tkdhanasekar/hello-world \
 under goals and options -> clean install \
 click -> apply and save \
-click -> Build Now \
+click -> Build Now 
 
 __Install Tomcat server__
 
@@ -220,7 +220,7 @@ __Integrate Tomcat with Jenkins__
 click -> manage jenkins \
 click -> available \
 search -> deploy to container \
-select -> install without restart \
+select -> install without restart 
 
 click -> manage jenkins \
 click -> manage credentials \
@@ -247,11 +247,11 @@ WAR/EAR files -> **/*.war \
 Containers -> tomcat 8.x remote \
 credentials -> deployer/*****(tomcat deployer) \
 tomcat url -> http://tomcat-server-ip:8080 \
-click -> apply and save \
+click -> apply and save 
 
 click -> build now \
 click -> tomcatserver:8080/manager \
-click ->webapp  \
+click ->webapp  
 
 ```
 $ git clone ssh://github.com/tkdhanasekar/hello-world.git
