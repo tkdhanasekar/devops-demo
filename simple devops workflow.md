@@ -111,7 +111,7 @@ outside of mvn folder it will not work
 # vim .bash_profile
 M2_HOME=/opt/maven
 M2=/opt/maven/bin
-JAVA_HOME=/usr/lib/jvm/java-11-openjdk-11.......
+JAVA_HOME=/usr/lib/jvm/java-11-openjdk-11.0.13.0.8-1.amzn2.0.3.x86_64
 PATH=$PATH:$HOME/bin:$JAVA_HOME:$M2_HOME:$M2
 :wq!
 #echo $PATH
@@ -134,7 +134,7 @@ under JDK  \
 Add  JDK  \
 disable install automatically \
 Name: Java-11 \
-JAVA_HOME:  /usr/lib/jvm/java-11-openjdk-11........ 
+JAVA_HOME:  /usr/lib/jvm/java-11-openjdk-11.0.13.0.8-1.amzn2.0.3.x86_64
 
 under Maven \
 Add Maven \
@@ -205,12 +205,16 @@ which is under /opt/tomcat/conf
 remove the users details and add this
 ```
 <role rolename="manager-gui"/>
- <role rolename="manager-script"/>
- <role rolename="manager-jmx"/>
- <role rolename="manager-status"/>
- <user username="admin" password="admin" roles="manager-gui, manager-script, manager-jmx, manager-status"/>
+<role rolename="manager-script"/>
+<role rolename="manager-jmx"/>
+<role rolename="manager-status"/>
+<user username="admin" password="admin" roles="manager-gui, manager-script, manager-jmx, manager-status"/>
 <user username="deployer" password="deployer" roles="manager-script"/>
 <user username="tomcat" password="Cent@123" roles="manager-gui"/>
+```
+```
+$ tomcatdown
+$ tomcatup
 ```
 
 Restart serivce and try to login to tomcat application from the browser.
@@ -251,7 +255,7 @@ click -> apply and save
 
 click -> build now \
 click -> tomcatserver:8080/manager \
-click ->webapp  
+click -> webapp  
 
 ```
 $ git clone ssh://github.com/tkdhanasekar/hello-world.git
